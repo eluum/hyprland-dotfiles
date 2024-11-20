@@ -1,0 +1,25 @@
+
+* {
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: "Ubuntu Nerd Font";
+}
+
+#waybar {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    background: transparent;
+    color: white;
+    border-top: 2px solid transparent;
+
+}
+
+#workspaces button.visible {
+    color: white;
+    border-top: 2px solid white;
+}
