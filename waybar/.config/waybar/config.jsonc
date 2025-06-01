@@ -1,7 +1,7 @@
 {
     "layer": "bottom",
     "position": "top",
-    "height": 26,
+    "height": 42,
     "spacing": 5,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
@@ -42,13 +42,14 @@
         "format-muted": "",
         "format-icons": {
             "headphones": "",
-            "handsfree": "",
-            "headset": "",
+            "handsfree": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "min-height": 0,
     },
 }
