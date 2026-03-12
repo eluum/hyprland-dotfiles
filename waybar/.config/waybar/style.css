@@ -2,29 +2,24 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "GoMonoNerdFont";
-    font-size: 26px;
-    min-height: 0;
-    margin: -1;
+    font-size: 24px;
+    font-family: "Go Mono Nerd Font";
 }
 
 #waybar {
-    background-color: #2A4C4D;
+    background-color: #222222;
     color: #ffffff;
 }
 
 #workspaces button {
-    padding: 1px 10px;
+    padding: 0px 5px;
     background: transparent;
     color: white;
+    border-top: 2px solid transparent;
 
 }
 
-#workspaces button.visible {
+#workspaces button.focused {
     color: white;
-    background: #60938E;
-}
-
-#clock {
-    padding: 0px 10px;
+    border-top: 2px solid white;
 }

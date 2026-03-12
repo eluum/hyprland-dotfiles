@@ -1,10 +1,10 @@
 {
     "layer": "bottom",
     "position": "top",
-    "height": 42,
+    "height": 26,
     "spacing": 5,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["niri/window"],
     "modules-right": ["tray","battery","pulseaudio","clock"],
     "clock": {
         "format": "{:%I:%M %p}",
@@ -14,7 +14,7 @@
             "months": "<span color='#ffead3'><b>{}</b></span>",
             "today": "<span color='#ff6699'><b>{}</b></span>"
         }
-    },
+	}
     },
     "battery": {
         "interval": 10,
@@ -38,7 +38,7 @@
     "pulseaudio": {
         //"scroll-step": 1,
         "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon}  {volume}% ",
+        "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
@@ -49,7 +49,6 @@
             "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol",
-        "min-height": 0,
-    },
+        "on-click": "pavucontrol"
+    }
 }
