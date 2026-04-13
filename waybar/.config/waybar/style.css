@@ -7,19 +7,38 @@
 }
 
 #waybar {
-    background-color: #222222;
+    background-color: transparent;
     color: #ffffff;
+}
+
+#workspaces,
+#tray,
+#battery,
+#pulseaudio,
+#clock {
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 0px 12px;
+    margin: 16px 4px 0;
+}
+
+#workspaces {
+    margin-left: 16px;
+    padding: 4px;
+}
+
+#clock {
+    margin-right: 16px;
 }
 
 #workspaces button {
     padding: 0px 5px;
     background: transparent;
     color: white;
-    border-top: 2px solid transparent;
-
 }
 
-#workspaces button.focused {
-    color: white;
-    border-top: 2px solid white;
+#workspaces button.active {
+    color: #222222;
+    background-color: white;
+    border-radius: 8px;
 }

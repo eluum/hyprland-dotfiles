@@ -1,10 +1,9 @@
 {
     "layer": "bottom",
     "position": "top",
-    "height": 26,
     "spacing": 5,
     "modules-left": ["niri/workspaces"],
-    "modules-center": ["niri/window"],
+    "modules-center": [],
     "modules-right": ["tray","battery","pulseaudio","clock"],
     "clock": {
         "format": "{:%I:%M %p}",
@@ -23,31 +22,31 @@
             "critical": 15
         },
         // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
+        "format": "  {icon}  {capacity}%", // Icon: bolt
         // Not connected to AC
         "format-discharging": "{icon}{capacity}%",
         "format-icons": [
-            "", // Icon: battery-full
-            "", // Icon: battery-three-quarters
-            "", // Icon: battery-half
-            "", // Icon: battery-quarter
-            ""  // Icon: battery-empty
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
         ],
         "tooltip": true
     },
     "pulseaudio": {
         //"scroll-step": 1,
         "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
         },
         "on-click": "pavucontrol"
     }
