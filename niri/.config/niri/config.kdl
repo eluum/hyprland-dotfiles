@@ -27,6 +27,7 @@ input {
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
+            options "caps:escape"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -68,6 +69,13 @@ input {
         // scroll-button-lock
         // middle-emulation
     }
+    
+    tablet {
+        // off
+        map-to-output "HDMI-A-1"
+        // left-handed
+        // calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
+    }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     warp-mouse-to-focus
@@ -85,7 +93,7 @@ input {
 // Remember to uncomment the node by removing "/-"!
 output "DP-3" {
     mode "3840x2160@59.997"
-    scale 1.2
+    scale 1.0
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
@@ -94,7 +102,7 @@ output "DP-3" {
 
 output "HDMI-A-1" {
     mode "3840x2160@59.997"
-    scale 1.2
+    scale 1.0
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
@@ -264,6 +272,7 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
+spawn-sh-at-startup "swaybg -i /usr/share/backgrounds/tiling_colorful_flowers.jpg -m tile"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
