@@ -1,0 +1,20 @@
+#!/bin/bash
+
+NEW_SESSION="[new session]"
+
+sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null)
+
+if [ -z "$sessions" ]; then
+    kitty tmux new-session
+    exit 0
+fi
+
+selection=$(printf "%s\n%s" "$NEW_SESSION" "$sessions" | fuzzel --dmenu)
+
+[ -z "$selection" ] && exit 0
+
+if [ "$selection" = "$NEW_SESSION" ]; then
+    kitty tmux new-session
+else
+    kitty tmux attach -t "$selection"
+fi
